@@ -1,0 +1,3 @@
+resultsArray = [];
+
+module.exports = resultsArray; 

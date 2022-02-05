@@ -20,7 +20,7 @@ function subtractionAssignment() {
 }
 function multiplicationAssignment() {
      operator = '*';
-    console.log($('#subtraction-button').text());
+    console.log($('#multiplication-button').text());
 }
 function divisionAssignment() {
      operator = '/';
@@ -46,8 +46,20 @@ function sendValues() {
     }).then(function(){
         //what happens when the request had been made
        console.log('inputs added correctly!');
+       getValues();
     }).catch(function(response){
         console.log('rut ro scoob',response);
     })
+    $('#second-number').val('');
+    $('#first-number').val('');
 
 }    
+function getValues() {
+    $.ajax({
+        method: 'GET',
+        url: '/mathResults'
+    }).then(function(response){
+        console.log('does this work??');
+        console.log(response);
+    })
+}
