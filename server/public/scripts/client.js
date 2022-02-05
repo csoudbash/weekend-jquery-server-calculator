@@ -60,6 +60,30 @@ function getValues() {
         url: '/mathResults'
     }).then(function(response){
         console.log('does this work??');
-        console.log(response);
+        // console.log(response);
+        appendMathToDom(response);
     })
 }
+
+function appendMathToDom(listOfProblems) {
+    console.log(listOfProblems);
+    $('#unordered-list').empty();
+    //used for appending the answer to the most recent math problem onto the screen above the history of the math
+    // for (problem of listOfProblems[listOfProblems.length-1]) { 
+    //     $('#table').append(`
+
+    //     `)
+    // }
+    //used for appending the history of previous guesses to the dom
+    for (let problem of listOfProblems) {
+        $('#unordered-list').append(`<li>
+        ${problem.firstNumber} ${problem.operator} ${problem.secondNumber} = ${problem.result}
+        </li>`)
+    }
+}
+// newObject = {
+//     result: result,
+//     firstNumber: firstInput,
+//     secondNumber: secondInput,
+//     operator: input.operator,  
+// }
