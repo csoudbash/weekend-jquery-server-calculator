@@ -3,7 +3,7 @@ let operator;
 
 function onReady() {
     console.log('jquery is loaded');
-    $('#equals-button').on('click',sendValues)
+    $('#equals-button').on('click',sendValues);
     $('#addition-button' ).on('click' ,additionAssignment);
     $('#subtraction-button').on('click',subtractionAssignment);
     $('#division-button').on('click',divisionAssignment);
@@ -12,6 +12,7 @@ function onReady() {
     getValues();
 }
 
+// functions assigned 
 function additionAssignment() {
      operator= '+';
     console.log($('#addition-button').text());
@@ -47,7 +48,7 @@ function sendValues() {
         }
     }).then(function(){
         //what happens when the request had been made
-    //    console.log('inputs added correctly!');
+    //console.log('inputs added correctly!');
        getValues();
     }).catch(function(response){
         console.log('rut ro scoob',response);
@@ -76,7 +77,7 @@ function appendMathToDom(listOfProblems) {
 
     $('#unordered-list').empty();// clears the history of previous math problems each time the function is ran
     $('#last-answer').empty();// clears the history of the previous last answer each time the function is ran
-    
+
     //used for appending the answer to the most recent math problem onto the screen above the history of the math
     if (listOfProblems.length > 0) { //this is here so that when the page loads with nothing in the array, it doesnt try to append nothing to the screen
         $('#last-answer').append(`<h3>
