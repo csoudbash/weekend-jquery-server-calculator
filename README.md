@@ -13,15 +13,12 @@ This is a basic calculator project. This is meant to grab the inputs from the DO
 
 ## Installation
 
-How do you get your application up and running? This is a step by step list for how another developer could get this project up and running. The good target audience in terms of knowledge, would be a fellow Primer from another cohort being able to spin up this project. Note that you do not need a paragraph here to intro Installation. It should be step-by-step.
-
 1. run 'npm install'. this should install all necessary files so long as you have node.js installed
 2. to turn the server on, simply type 'npm start' into the console. you should be prompted with a 'listening on port 5000' if this worked
 3. next go to the url 'http://localhost:5000/' in your browser of choice.
 4. the calculator should now be visable to you on the webpage. 
 
 ## Usage
-How does someone use this application? Tell a user story here.
 
 1. enter in a number into the first input field
 2. enter in a number into the second input field
