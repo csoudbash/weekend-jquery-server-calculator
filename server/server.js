@@ -51,7 +51,7 @@ app.listen(PORT, () => {
       }
       // creating a new object with all of the previous data and now including the result 
       newObject = {
-          result: result,
+          answer: result,
           firstNumber: firstInput,
           secondNumber: secondInput,
           operator: input.operator,  
@@ -64,4 +64,10 @@ app.listen(PORT, () => {
   app.get('/mathResults',function(req, res){
       console.log('inside /mathResults', req.body);
       res.send(previousMathArray);
+  })
+
+  app.get('/clearDom',function(req,res){
+      console.log('resetting dom in progress, beep boop');
+      previousMathArray= [];
+      res.send(previousMathArray); 
   })
